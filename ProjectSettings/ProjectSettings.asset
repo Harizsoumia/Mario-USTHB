@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 28
-  productGUID: 8662aae8b826be7419b959f53f0e6a30
+  productGUID: 1572398c5a546614a806bea30ac6422c
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: Mario-USTHB
+  productName: learn
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -844,14 +844,14 @@ PlayerSettings:
   editorAssembliesCompatibilityLevel: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Mario-USTHB
+  metroPackageName: learn
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: Mario-USTHB
+  metroApplicationDescription: learn
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -922,10 +922,10 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: b9fe22f8-4d53-43d2-80bf-6a369dd7bc9a
+  cloudProjectId: de05639f-13fa-4d09-84ca-12f710c31a0f
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Mario-USTHB
+  projectName: learn
   organizationId: sousoumia
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0

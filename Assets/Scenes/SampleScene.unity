@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 61919026}
   - component: {fileID: 61919025}
   - component: {fileID: 61919024}
-  - component: {fileID: 61919023}
+  - component: {fileID: 61919029}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -140,21 +140,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &61919023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 61919022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19b51a57230396b409499bced1ba8d30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  forwardSpeed: 6
-  laneDistance: 2
-  jumpForce: 7
 --- !u!54 &61919024
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -276,6 +261,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &61919029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 61919022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b0ac15593bb07d418127bf11c4cdc2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  forwardSpeed: 6
+  laneDistance: 2
+  jumpForce: 7
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,7 +426,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f3eb12f0976bc44bbd40fa748a6da26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  player: {fileID: 61919028}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0

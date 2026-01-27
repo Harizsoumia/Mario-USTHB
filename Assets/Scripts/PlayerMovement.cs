@@ -4,38 +4,43 @@ public class PlayerMovement : MonoBehaviour
 {
     public float forwardSpeed = 6f;
     public float laneDistance = 2f;
-    public float jumpForce = 7f;
+    public float jumpForce = 10f;
+    public static bool isGameOver = false;
 
     private Rigidbody rb;
-    private int currentLane = 0; // -1 left, 0 middle, 1 right
+    private int currentLane = 0;
     private bool isGrounded = true;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        isGameOver = false;
     }
 
     void Update()
     {
+        if (isGameOver) return; 
+        
         MoveForward();
         HandleLaneSwitch();
         Jump();
     }
 
-    void MoveForward()
-    {
-        rb.linearVelocity = new Vector3(rb.linearVelocity.x, rb.linearVelocity.y, forwardSpeed);
-    }
+   void MoveForward()
+{
+    Vector3 v = rb.linearVelocity;
+    v.z = forwardSpeed;
+    rb.linearVelocity = v;
+}
+
 
     void HandleLaneSwitch()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A) && currentLane > -1)
             currentLane--;
 
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D) && currentLane < 1)
             currentLane++;
-
-        currentLane = Mathf.Clamp(currentLane, -1, 1);
 
         Vector3 targetPosition = transform.position;
         targetPosition.x = currentLane * laneDistance;
@@ -56,5 +61,16 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
             isGrounded = true;
+    }
+    
+    
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Obstacle"))
+        {
+            Debug.Log(" Game Over!");
+            isGameOver = true;
+            Time.timeScale = 0f;
+        }
     }
 }

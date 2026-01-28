@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
     public float laneDistance = 2f;
     public float jumpForce = 10f;
     public static bool isGameOver = false;
+// update test
 
     private Rigidbody rb;
     private int currentLane = 0;

@@ -6,8 +6,11 @@ public class PlayerMovement : MonoBehaviour
     public float laneDistance = 2f;
     public float jumpForce = 10f;
     public static bool isGameOver = false;
-// update test
-
+    
+    // AUDIO - ADD THIS
+    public AudioClip jumpSound;
+    private AudioSource audioSource;
+    
     private Rigidbody rb;
     private int currentLane = 0;
     private bool isGrounded = true;
@@ -15,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();  // ADD THIS
         isGameOver = false;
     }
 
@@ -27,13 +31,12 @@ public class PlayerMovement : MonoBehaviour
         Jump();
     }
 
-   void MoveForward()
-{
-    Vector3 v = rb.linearVelocity;
-    v.z = forwardSpeed;
-    rb.linearVelocity = v;
-}
-
+    void MoveForward()
+    {
+        Vector3 v = rb.linearVelocity;
+        v.z = forwardSpeed;
+        rb.linearVelocity = v;
+    }
 
     void HandleLaneSwitch()
     {
@@ -55,6 +58,12 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isGrounded = false;
+            
+            // PLAY JUMP SOUND - ADD THIS
+            if (jumpSound != null && audioSource != null)
+            {
+                audioSource.PlayOneShot(jumpSound);
+            }
         }
     }
 
@@ -64,12 +73,11 @@ public class PlayerMovement : MonoBehaviour
             isGrounded = true;
     }
     
-    
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Obstacle"))
         {
-            Debug.Log(" Game Over!");
+            Debug.Log("Game Over!");
             isGameOver = true;
             Time.timeScale = 0f;
         }

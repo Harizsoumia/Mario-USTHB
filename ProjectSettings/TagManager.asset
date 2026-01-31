@@ -8,6 +8,7 @@ TagManager:
   - New tag
   - Obstacle
   - YellowObstacle
+  - Box
   layers:
   - Default
   - TransparentFX

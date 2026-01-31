@@ -3,7 +3,62 @@ guid: db6e050ab356bc142bb19a4a836bc919
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BodyMT
+    second: {fileID: 2100000, guid: a6cc305f6edae314486f2369833816e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CapMT
+    second: {fileID: 2100000, guid: 17a6da3c546e89743b63cad4c80550d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CaptainCapMT
+    second: {fileID: 2100000, guid: d1615a0113bbbb144985308116549b24, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EyeBallMT
+    second: {fileID: 2100000, guid: d0aa5e7dc2d71ac4285320a2bb8e77e3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EyeMT
+    second: {fileID: 2100000, guid: fc0e08299bf0b8f4b91bbeb1cadbfbac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EyePupilLeftMT
+    second: {fileID: 2100000, guid: 9c01bbe017d1d874cba328a58f86ede5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EyePupilRightMT
+    second: {fileID: 2100000, guid: 5429e137f4901ea408c084fd013b76be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FaceMT
+    second: {fileID: 2100000, guid: 8fed1230b60baf54494b4ccccac4c8f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HairFaceMT
+    second: {fileID: 2100000, guid: c68e776b66b242746b8aefe16239d829, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HairMT
+    second: {fileID: 2100000, guid: 9aba803b2d60b1843aec40e3d2ff2f86, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HandMT
+    second: {fileID: 2100000, guid: efe140e3f5334ce42bedfe949d5a98da, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

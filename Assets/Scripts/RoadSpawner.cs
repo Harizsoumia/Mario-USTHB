@@ -31,18 +31,16 @@ public class RoadSpawner : MonoBehaviour
         }
     }
 
-void Update()
-{
-    if (player == null) return;
-
-    // Spawn quand le joueur arrive près de la dernière route posée
-    if (player.position.z + (numberOfRoads * roadLength) > nextSpawnZ)
+    void Update()
     {
-        SpawnRoad();
-        DestroyOldRoad();
+        if (player == null) return;
+        
+        if (player.position.z > nextSpawnZ - (numberOfRoads * roadLength))
+        {
+            SpawnRoad();
+            DestroyOldRoad();
+        }
     }
-}
-
 
     void SpawnRoad()
     {
